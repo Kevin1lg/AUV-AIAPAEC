@@ -67,7 +67,7 @@ To run the simulator using the following commands:
 ~~~bash
 cd colcon_ws
 colcon build
-export GZ_SIM_RESOURCE_PATH=~/colcon_ws/src/aiapaec_models/models:~/colcon_ws/src/aiapaec_models/worlds
+export GZ_SIM_RESOURCE_PATH=~/AUV-AIAPAEC/colcon_ws/src/aiapaec_models/models:~/AUV-AIAPAEC/colcon_ws/src/aiapaec_models/worlds
 source install/setup.bash
 ros2 launch ros_pkg_bringup aiapaec.launch.py
 ~~~
