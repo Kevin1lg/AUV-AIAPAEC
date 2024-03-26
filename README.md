@@ -20,14 +20,10 @@ The three required Gazebo plugins are included in the Gazebo harmonic version.
 
 To download and install the simulator AUV AIAPAEC follow the instructions.
 
-1. Cloning the achives to GitHub
+1. Cloning the archives to GitHub
+
 ~~~bash
 git clone https://github.com/Kevin1lg/AUV-AIAPAEC.git
-~~~
-
-2. Compilate and run the achives
-~~~bash
-cd /AUV-AIAPAEC/colcon_ws
 colcon build
 ~~~
 
@@ -60,7 +56,7 @@ The simulator offers the open loop and closed loop operation modes. To demonstra
 To run the simulator using the following commands:
 
 ~~~bash
-cd colcon_ws
+cd AUV-AIAPAEC/colcon_ws
 colcon build
 export GZ_SIM_RESOURCE_PATH=~/AUV-AIAPAEC/colcon_ws/src/aiapaec_models/models:~/AUV-AIAPAEC/colcon_ws/src/aiapaec_models/worlds
 source install/setup.bash
@@ -70,7 +66,7 @@ ros2 launch ros_pkg_bringup aiapaec.launch.py
 To run the control node using the following commands in an other terminal
 
 ~~~bash
-cd colcon_ws
+cd AUV-AIAPAEC/colcon_ws
 source install/setup.bash
 ros2 run ros_pkg_aplication <node name>
 ~~~
