@@ -21,7 +21,6 @@ The three required Gazebo plugins are included in the Gazebo harmonic version.
 To download and install the simulator AUV AIAPAEC follow the instructions.
 
 1. Cloning the achives to GitHub
-
 ~~~bash
 git clone https://github.com/Kevin1lg/AUV-AIAPAEC.git
 ~~~
