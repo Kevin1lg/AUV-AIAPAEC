@@ -20,18 +20,9 @@ The three required Gazebo plugins are included in the Gazebo harmonic version.
 
 To download and install the simulator AUV AIAPAEC follow the instructions.
 
-1. Create and compile ROS2 archive
+1. Cloning the archives to GitHub
 
 ~~~bash
-mkdir colcon_ws
-cd colcon_ws
-colcon build
-~~~
-
-2. Cloning the archives to GitHub
-
-~~~bash
-cd ~/colcon_ws/src
 git clone "enlace github"
 colcon build
 ~~~
