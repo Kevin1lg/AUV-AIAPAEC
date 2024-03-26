@@ -1,0 +1,34 @@
+---
+- ros_topic_name: "/thruster1_joint/cmd_thrust"
+  gz_topic_name: "/model/aiapaec/joint/thruster1_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/thruster2_joint/cmd_thrust"
+  gz_topic_name: "/model/aiapaec/joint/thruster2_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/thruster3_joint/cmd_thrust"
+  gz_topic_name: "/model/aiapaec/joint/thruster3_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ  
+- ros_topic_name: "/aiapaec/imu"
+  gz_topic_name: "/aiapaec/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS
+- ros_topic_name: "/aiapaec/dvl"
+  gz_topic_name: "/aiapaec/dvl"
+  ros_type_name: "geometry_msgs/msg/Vector3"
+  gz_type_name: "gz.msgs.Vector3d"
+  direction: GZ_TO_ROS
+- ros_topic_name: "/aiapaec/odometry"
+  gz_topic_name: "/model/aiapaec/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+
+
+
