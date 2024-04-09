@@ -2,7 +2,10 @@
 
 > Status: proof-of-concept, updated for Gazebo Harmonic binaries
 
+![AIAPAEC AUV](images/aiapaec.jpg)
+
 This is a simulator of an overactuated AUV, named AIAPAEC, running in Gazebo Harmonic and ROS2 Iron. Moreover, it uses the following Gazebo plugins: the BuoyancyPlugin, the HydrodynamicsPlugin and the ThrusterPlugin.
+
 
 # Requirements
 
@@ -36,7 +39,7 @@ colcon build
     │   ├── aiapaec_models          # Models to world, Aiapaec AUV, axes, coast waves and sand heightmap
     │   ├── gz_transport_dvl        # Transport of messages from DVL to gz bridge
     │   ├── ros_pkg_aplication      # Nodes to ROS2
-    │   └── ros_pkg_bringup         # Gz bridge configuration files, ros2 and gazebo release
+    │   └── ros_pkg_bringup         # Gz bridge configuration files and ROS2 launch files 
     
 # Instruction to run the simulator
 
@@ -56,19 +59,36 @@ The simulator offers the open loop and closed loop operation modes. To demonstra
 To run the simulator using the following commands:
 
 ~~~bash
-cd AUV-AIAPAEC/colcon_ws
+cd ws
 colcon build
-export GZ_SIM_RESOURCE_PATH=~/AUV-AIAPAEC/colcon_ws/src/aiapaec_models/models:~/AUV-AIAPAEC/colcon_ws/src/aiapaec_models/worlds
+export GZ_SIM_RESOURCE_PATH=~/ws/src/aiapaec_models/models:~/ws/src/aiapaec_models/worlds
 source install/setup.bash
 ros2 launch ros_pkg_bringup aiapaec.launch.py
 ~~~
 
-To run the control node using the following commands in an other terminal
-
+To run the control node using the sensor data use the following commands in an other terminal
 ~~~bash
-cd AUV-AIAPAEC/colcon_ws
+cd ws
 source install/setup.bash
-ros2 run ros_pkg_aplication <node name>
+ros2 launch ros_pkg_bringup sensor.launch.py
+~~~
+To run the control node using the odometry data use the following commands in an other terminal
+~~~bash
+cd ws
+source install/setup.bash
+ros2 launch ros_pkg_bringup odometry.launch.py
+~~~
+To run the zig-zag maneuver using the odometry data use the following commands in an other terminal
+~~~bash
+cd ws
+source install/setup.bash
+ros2 launch ros_pkg_bringup zig_zag.launch.py
+~~~
+To run the open-loop control use the following commands in an other terminal
+~~~bash
+cd ws
+source install/setup.bash
+ros2 launch ros_pkg_bringup open_loop.launch.py
 ~~~
 
 * Suggestions: Before to run the control node, be sure to press play in Gazebo Harmonic simulator
