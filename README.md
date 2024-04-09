@@ -2,7 +2,7 @@
 
 > Status: proof-of-concept, updated for Gazebo Harmonic binaries
 
-<p align="center"> ![AIAPAEC AUV](images/aiapaec.jpg) </p>
+![AIAPAEC AUV](images/aiapaec.jpg){:.center}
 
 This is a simulator of an overactuated AUV, named AIAPAEC, running in Gazebo Harmonic and ROS2 Iron. Moreover, it uses the following Gazebo plugins: the BuoyancyPlugin, the HydrodynamicsPlugin and the ThrusterPlugin.
 
