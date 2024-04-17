@@ -27,6 +27,7 @@ To download and install the simulator AUV AIAPAEC follow the instructions.
 
 ~~~bash
 git clone https://github.com/Kevin1lg/AUV-AIAPAEC.git
+cd AUV-AIAPAEC/ws
 colcon build
 ~~~
 
@@ -59,34 +60,33 @@ The simulator offers the open loop and closed loop operation modes. To demonstra
 To run the simulator using the following commands:
 
 ~~~bash
-cd ws
-colcon build
-export GZ_SIM_RESOURCE_PATH=~/ws/src/aiapaec_models/models:~/ws/src/aiapaec_models/worlds
+cd AUV-AIAPAEC/ws
+export GZ_SIM_RESOURCE_PATH=~/AUV-AIAPAEC/ws/src/aiapaec_models/models:~/AUV-AIAPAEC/ws/src/aiapaec_models/worlds
 source install/setup.bash
 ros2 launch ros_pkg_bringup aiapaec.launch.py
 ~~~
 
 To run the control node using the sensor data use the following commands in an other terminal
 ~~~bash
-cd ws
+cd AUV-AIAPAEC/ws
 source install/setup.bash
 ros2 launch ros_pkg_bringup sensor.launch.py
 ~~~
 To run the control node using the odometry data use the following commands in an other terminal
 ~~~bash
-cd ws
+cd AUV-AIAPAEC/ws
 source install/setup.bash
 ros2 launch ros_pkg_bringup odometry.launch.py
 ~~~
 To run the zig-zag maneuver using the odometry data use the following commands in an other terminal
 ~~~bash
-cd ws
+cd AUV-AIAPAEC/ws
 source install/setup.bash
 ros2 launch ros_pkg_bringup zig_zag.launch.py
 ~~~
 To run the open-loop control use the following commands in an other terminal
 ~~~bash
-cd ws
+cd AUV-AIAPAEC/ws
 source install/setup.bash
 ros2 launch ros_pkg_bringup open_loop.launch.py
 ~~~
