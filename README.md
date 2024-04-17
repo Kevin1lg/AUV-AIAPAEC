@@ -38,7 +38,7 @@ colcon build
     ├── log                         # File compilated
     ├── src                         
     │   ├── aiapaec_models          # Models to world, Aiapaec AUV, axes, coast waves and sand heightmap
-    │   ├── gz_transport_dvl        # Transport of messages from DVL to gz bridge
+    │   ├── gz_transport_dvl        # # Transport of messages from DVL, simulation time and real time to gz bridge
     │   ├── ros_pkg_aplication      # Nodes to ROS2
     │   └── ros_pkg_bringup         # Gz bridge configuration files and ROS2 launch files 
     
