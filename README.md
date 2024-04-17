@@ -91,7 +91,7 @@ source install/setup.bash
 ros2 launch ros_pkg_bringup open_loop.launch.py
 ~~~
 
-* Suggestions: Before to run the control node, be sure to press play in Gazebo Harmonic simulator
+* Suggestions: Before to run any control node, be sure to press play in Gazebo Harmonic simulator
 
 # License
 
